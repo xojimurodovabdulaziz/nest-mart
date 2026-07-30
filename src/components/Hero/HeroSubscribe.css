@@ -1,0 +1,107 @@
+.hero-subscribe {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  height: 64px;
+  padding: 0 0 0 30px;
+}
+
+.hero-subscribe input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-text-muted);
+}
+
+.hero-subscribe input:focus {
+  outline: none;
+}
+
+.hero-subscribe button {
+  width: 134px;
+  height: 64px;
+  border-radius: 50px;
+  padding: 0 30px;
+  background: var(--color-brand-400);
+  color: white;
+  border: none;
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.hero-subscribe button:hover {
+  background-color: var(--color-brand-600);
+}
+
+.hero-subscribe-msg {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-subscribe-msg.success {
+  color: #ffffff;
+}
+
+.hero-subscribe-msg.error {
+  color: var(--color-danger-100);
+}
+
+@media (max-width: 550px) {
+  .hero-subscribe {
+    width: 100%;
+    max-width: 100%;
+    height: 48px;
+    padding: 0 0 0 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  }
+
+  .hero-subscribe input {
+    padding: 0;
+    font-size: 13px;
+  }
+
+  .hero-subscribe button {
+    width: auto;
+    height: 48px;
+    padding: 0 20px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
+.hero-dots {
+  display: none;
+}
+
+.hero-dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(59, 183, 126, 0.3);
+  display: inline-block;
+}
+
+.hero-dots .dot.active {
+  background-color: var(--color-brand-400);
+}
+
+@media (max-width: 550px) {
+  .hero-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+  }
+}

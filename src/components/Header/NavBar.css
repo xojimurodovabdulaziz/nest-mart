@@ -1,0 +1,91 @@
+.navbar {
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 64px;
+  flex-wrap: wrap;
+}
+
+.navbar-category-wrapper {
+  position: relative;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-brand-500);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.category-btn:hover {
+  background: var(--color-brand-600);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.navbar-links a:hover {
+  color: var(--color-brand-500);
+}
+
+.nav-role-btn {
+  background: var(--color-brand-50) !important;
+  color: var(--color-brand-500) !important;
+  border: 1px solid var(--color-brand-100);
+  border-radius: 999px;
+  padding: 6px 14px !important;
+  font-weight: 700 !important;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.nav-role-btn:hover {
+  background: var(--color-brand-500) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+  /* BottomNav + the on-page SectionNav already cover navigation on mobile,
+     so the full navbar row (with its own sticky category dropdown) would
+     just compete with the sticky search bar for space. */
+  .navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

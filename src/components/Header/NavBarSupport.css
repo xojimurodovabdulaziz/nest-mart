@@ -1,0 +1,34 @@
+.navbar-support {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.support-icon {
+  color: var(--color-brand-500);
+  flex-shrink: 0;
+}
+
+.support-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.support-phone {
+  color: var(--color-heading);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.support-label {
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+@media (max-width: 992px) {
+  .navbar-support {
+    display: none;
+  }
+}

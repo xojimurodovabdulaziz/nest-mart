@@ -1,0 +1,134 @@
+
+export interface BlogArticle {
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string[];
+  image: string;
+  category: string;
+  tags: string[];
+  author: string;
+  date: string;
+  readTime: string;
+}
+
+export const CATEGORIES = ["Barchasi", "Retseptlar", "Yangiliklar", "Oshxona", "Sog'lom turmush"];
+
+export const ARTICLES: BlogArticle[] = [
+  {
+    slug: "sog-lom-ovqatlanish-qollanmasi",
+    title: "Sog'lom ovqatlanishning boshlang'ich qo'llanmasi",
+    excerpt: "Kundalik menyuni muvozanatli va foydali qilishning oddiy usullari.",
+    content: [
+      "Sog'lom ovqatlanish murakkab bo'lishi shart emas — asosiysi rang-barang va tabiiy mahsulotlarni tanlash.",
+      "Har bir ovqatlanishda kamida yarim tarelkani sabzavot va mevalar bilan to'ldirishga harakat qiling.",
+      "Tayyor va qayta ishlangan mahsulotlar o'rniga yangi, mahalliy fermer mahsulotlariga ustunlik bering.",
+    ],
+    image: "https://picsum.photos/seed/blog-healthy/700/460",
+    category: "Sog'lom turmush",
+    tags: ["salomatlik", "ovqatlanish"],
+    author: "Nest jamoasi",
+    date: "2026-06-12",
+    readTime: "4 daqiqa",
+  },
+  {
+    slug: "yozgi-kinoa-salat",
+    title: "Limonli kinoa salati — yozgi retsept",
+    excerpt: "Yengil, sershovqin va tayyorlash uchun 20 daqiqa yetarli.",
+    content: [
+      "Kinoa oqsilga boy va tez tayyorlanadigan don hisoblanadi.",
+      "Yangi ko'katlar, limon sharbati va zaytun moyi bilan aralashtiring — yozgi tushlik uchun ideal.",
+      "Sovutgichda 3 kungacha saqlash mumkin, shu sababli oldindan tayyorlab qo'yish uchun qulay.",
+    ],
+    image: "https://picsum.photos/seed/blog-quinoa/700/460",
+    category: "Retseptlar",
+    tags: ["salat", "yengil-ovqat"],
+    author: "Nest oshxonasi",
+    date: "2026-06-05",
+    readTime: "3 daqiqa",
+  },
+  {
+    slug: "kaprese-tovuq",
+    title: "Kaprese tovuq va ezilgan kartoshka",
+    excerpt: "Pomidor, mozzarella va rayhon bilan boyitilgan sodda kechki ovqat.",
+    content: [
+      "Tovuq ko'kragini oltin qiziargacha qovuring, so'ng pomidor va mozzarella bilan bezang.",
+      "Kartoshkani yumshoq bo'lgunicha qaynatib, keyin yengil ezib, zaytun moyi bilan aralashtiring.",
+      "Ustidan yangi rayhon va balzamik sous bilan bezatib xizmat qiling.",
+    ],
+    image: "https://picsum.photos/seed/blog-caprese/700/460",
+    category: "Retseptlar",
+    tags: ["tovuq", "kechki-ovqat"],
+    author: "Nest oshxonasi",
+    date: "2026-05-28",
+    readTime: "5 daqiqa",
+  },
+  {
+    slug: "chalkak-tortlari",
+    title: "Bodom yog'i va shokoladli qovoqcha tort",
+    excerpt: "Shirinlik ixlosmandlari uchun foydali muqobil desert.",
+    content: [
+      "Qovoqcha tortga namlik va yengillik qo'shadi, ta'mi esa deyarli sezilmaydi.",
+      "Bodom yog'i an'anaviy sariyog'ga foydali alternativa bo'lib xizmat qiladi.",
+      "Tayyor tortni sovutib, bo'laklarga bo'lib xizmat qiling — bir hafta davomida yangi turadi.",
+    ],
+    image: "https://picsum.photos/seed/blog-almond/700/460",
+    category: "Retseptlar",
+    tags: ["desert", "shokolad"],
+    author: "Nest oshxonasi",
+    date: "2026-05-20",
+    readTime: "4 daqiqa",
+  },
+  {
+    slug: "yangi-fermer-yetkazib-berish",
+    title: "Yangilik: fermer mahsulotlari endi kunlik yetkazib beriladi",
+    excerpt: "Mahalliy fermerlar bilan hamkorlik doiramizni kengaytirdik.",
+    content: [
+      "Endi hudud fermerlaridan yig'ilgan mevalar va sabzavotlar har kuni ombonimizga yetib keladi.",
+      "Bu shuni anglatadiki, buyurtmangizdagi mahsulotlar yanada yangi va uzoq muddat saqlanadi.",
+      "Yaqin haftalarda yetkazib berish hududini yanada kengaytirishni rejalashtirmoqdamiz.",
+    ],
+    image: "https://picsum.photos/seed/blog-news/700/460",
+    category: "Yangiliklar",
+    tags: ["yangilik", "fermer"],
+    author: "Nest jamoasi",
+    date: "2026-06-18",
+    readTime: "2 daqiqa",
+  },
+  {
+    slug: "qishloq-uslubidagi-pasta",
+    title: "Quritilgan pomidorli sarimsoqli pasta",
+    excerpt: "10 daqiqada tayyor bo'ladigan kremsimon pasta retsepti.",
+    content: [
+      "Sarimsoqni yog'da yengil qovurib, quritilgan pomidor va qaymoq qo'shing.",
+      "Pastani sousga aralashtirib, ustidan parmezan bilan bezating.",
+      "Ko'proq ta'm uchun yangi rayhon barglarini qo'shishni unutmang.",
+    ],
+    image: "https://picsum.photos/seed/blog-pasta/700/460",
+    category: "Retseptlar",
+    tags: ["pasta", "kechki-ovqat"],
+    author: "Nest oshxonasi",
+    date: "2026-05-10",
+    readTime: "3 daqiqa",
+  },
+];
+
+export const GALLERY_IMAGES = [
+  "https://picsum.photos/seed/blog-gallery1/300/300",
+  "https://picsum.photos/seed/blog-gallery2/300/300",
+  "https://picsum.photos/seed/blog-gallery3/300/300",
+  "https://picsum.photos/seed/blog-gallery4/300/300",
+  "https://picsum.photos/seed/blog-gallery5/300/300",
+  "https://picsum.photos/seed/blog-gallery6/300/300",
+];
+
+export const POPULAR_TAGS = [
+  "salomatlik",
+  "retsept",
+  "yengil-ovqat",
+  "desert",
+  "fermer",
+  "kechki-ovqat",
+  "salat",
+  "tovuq",
+];

@@ -1,0 +1,72 @@
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: #fff;
+  border-bottom: 1px solid var(--color-surface-muted);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Below 700px the search bar itself becomes sticky (see MainBar.css) —
+   stack this rail directly beneath it instead of overlapping. */
+@media (max-width: 700px) {
+  .section-nav {
+    top: 60px;
+  }
+}
+
+.section-nav-rail {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 10px 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section-nav-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.section-nav-pill {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface-sunken);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.section-nav-pill:active {
+  transform: scale(0.96);
+}
+
+.section-nav-pill.active {
+  background: var(--color-brand-500);
+  border-color: var(--color-brand-500);
+  color: #fff;
+}
+
+/* Between 701-1024px the desktop-style NavBar (sticky, ~64px tall) is
+   still visible, so stack this rail beneath it. */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .section-nav {
+    top: 64px;
+  }
+}
+
+/* Only needed as a mobile/tablet quick-nav; hide on desktop where the
+   sidebar/full layout already gives clear orientation. */
+@media (min-width: 1025px) {
+  .section-nav {
+    display: none;
+  }
+}

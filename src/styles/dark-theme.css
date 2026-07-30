@@ -1,0 +1,124 @@
+/* ------------------------------------------------------------------
+   Dark mode. Activated by <html data-theme="dark">, toggled from
+   the header (see ThemeToggle inside HeaderIcons) and persisted in
+   localStorage via ThemeContext.
+
+   Strategy: rather than rewriting colors in every one of the ~90
+   component stylesheets, we override the handful of base surfaces
+   (body, header, footer) explicitly, then use attribute selectors
+   ([class*="-card"], [class*="-block"] etc.) to catch the many
+   white-panel components (product cards, deal cards, sidebar
+   blocks, modals) that share that naming pattern project-wide.
+-------------------------------------------------------------------*/
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+  background: #12151a;
+  color: #e7e9ec;
+}
+
+[data-theme="dark"] a {
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+[data-theme="dark"] .topbar,
+[data-theme="dark"] .mainbar,
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .footer {
+  background: #181c22;
+  border-color: #262b33;
+}
+
+[data-theme="dark"] .topbar,
+[data-theme="dark"] .topbar a,
+[data-theme="dark"] .navbar-links a,
+[data-theme="dark"] .header-icon-item,
+[data-theme="dark"] .search-category-btn,
+[data-theme="dark"] .logo,
+[data-theme="dark"] .footer,
+[data-theme="dark"] .footer a {
+  color: #d7dadf;
+}
+
+/* ---------- Generic white panels (cards / blocks / sections / modals) ---------- */
+[data-theme="dark"] [class*="-card"],
+[data-theme="dark"] [class*="-block"],
+[data-theme="dark"] [class*="-panel"],
+[data-theme="dark"] [class*="-drawer"],
+[data-theme="dark"] [class*="-modal"],
+[data-theme="dark"] [class*="-dropdown"],
+[data-theme="dark"] [class*="-menu"],
+[data-theme="dark"] .product-column,
+[data-theme="dark"] .shop-category-item,
+[data-theme="dark"] .quick-view-content {
+  background: #1c2027;
+  border-color: #2a2f38;
+  color: #e7e9ec;
+}
+
+[data-theme="dark"] [class*="-card"] *,
+[data-theme="dark"] [class*="-block"] *,
+[data-theme="dark"] .product-column * {
+  color: inherit;
+}
+
+[data-theme="dark"] .product-name,
+[data-theme="dark"] .product-column-name,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+  color: #f2f3f5;
+}
+
+[data-theme="dark"] .product-eyebrow,
+[data-theme="dark"] .product-vendor,
+[data-theme="dark"] [class*="-muted"],
+[data-theme="dark"] .grid-status {
+  color: #9aa0a8;
+}
+
+/* ---------- Inputs / forms ---------- */
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: #22262e;
+  color: #e7e9ec;
+  border-color: #333944;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #7d838c;
+}
+
+/* ---------- Sections with a soft tint background in light mode ---------- */
+[data-theme="dark"] .newsletter-banner,
+[data-theme="dark"] .footer-contact-card,
+[data-theme="dark"] .shop-category-expand {
+  background: #1a1f24;
+}
+
+[data-theme="dark"] .shop-category-item.active {
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* ---------- Skeleton shimmer ---------- */
+[data-theme="dark"] .skeleton-block {
+  background: linear-gradient(90deg, #1f242b 25%, #262c34 37%, #1f242b 63%);
+  background-size: 400% 100%;
+}
+
+/* ---------- Scrollbar (WebKit) ---------- */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #12151a;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #333944;
+}

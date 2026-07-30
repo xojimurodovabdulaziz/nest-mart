@@ -1,0 +1,154 @@
+.detail-tag-badge {
+  display: inline-block;
+  background: var(--color-danger-50);
+  color: var(--color-danger-400);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.detail-info h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-faint);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.detail-price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.detail-price {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-brand-500);
+}
+
+.detail-discount {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-danger-400);
+}
+
+.detail-old-price {
+  font-size: 16px;
+  color: var(--color-text-faint);
+  text-decoration: line-through;
+}
+
+.detail-description {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.detail-add-btn {
+  background: var(--color-brand-500);
+  color: #fff;
+  border: none;
+  padding: 0 28px;
+  height: 44px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.detail-add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.detail-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-strong);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.detail-icon-btn.active {
+  border-color: var(--color-brand-500);
+  color: var(--color-brand-500);
+}
+.detail-stock {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--color-text-faint);
+}
+
+@media (max-width: 720px) {
+  .detail-info h1 {
+    font-size: 21px;
+  }
+
+  .detail-price {
+    font-size: 21px;
+  }
+
+  .detail-actions {
+    gap: 10px;
+  }
+
+  .detail-add-btn {
+    flex: 1;
+    min-width: 140px;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-info h1 {
+    font-size: 18px;
+  }
+
+  .detail-price {
+    font-size: 19px;
+  }
+
+  .detail-old-price {
+    font-size: 14px;
+  }
+
+  .detail-description {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .detail-actions {
+    flex-wrap: wrap;
+  }
+
+  .detail-add-btn {
+    width: 100%;
+    order: 3;
+  }
+
+  .detail-icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,71 @@
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-4) 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.footer-bottom-inner p {
+  font-size: var(--text-sm);
+  color: var(--color-text-faint);
+}
+
+.footer-discount-note {
+  font-weight: 600;
+  color: var(--color-brand-500) !important;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer-social-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  margin-right: 2px;
+}
+
+.footer-social a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-brand-500);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.footer-social a:hover {
+  background: var(--color-brand-600);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 560px) {
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+  }
+
+  .footer-social {
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-social a,
+  .footer-app-badge {
+    transition: none;
+  }
+}

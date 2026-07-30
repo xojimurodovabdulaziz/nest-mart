@@ -1,0 +1,98 @@
+.vendor-form-page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.vendor-form-page h1 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.vendor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 24px;
+  animation: vendorFormIn 0.45s ease both;
+  transition: box-shadow 0.25s ease;
+}
+
+.vendor-form:hover {
+  box-shadow: 0 12px 32px -18px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes vendorFormIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vendor-form input {
+  padding: 12px 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vendor-form input:focus {
+  outline: none;
+  border-color: var(--color-brand-500);
+}
+
+.vendor-form button {
+  background: var(--color-brand-500);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.vendor-form button:not(:disabled):hover {
+  background: var(--color-brand-600);
+  transform: translateY(-1px);
+}
+
+.vendor-form button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+.vendor-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.vendor-error {
+  color: var(--color-danger-400);
+  font-size: 13px;
+}
+
+.vendor-success {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.vendor-success h1 {
+  color: var(--color-brand-500);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .vendor-form-page {
+    padding: 32px 14px 60px;
+  }
+}

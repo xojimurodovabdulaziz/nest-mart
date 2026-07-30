@@ -1,0 +1,50 @@
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff;
+  border: 1px solid var(--color-brand-100);
+  color: var(--color-brand-500);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tag-pill:hover {
+  background: var(--color-brand-50);
+}
+
+.tag-pill.active {
+  background: var(--color-brand-500);
+  color: #fff;
+  border-color: var(--color-brand-500);
+}
+
+@media (max-width: 768px) {
+  .sidebar-block.product-tags {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .product-tags h3 {
+    display: none !important;
+  }
+
+  .tags-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .tag-pill {
+    flex-shrink: 0;
+  }
+}

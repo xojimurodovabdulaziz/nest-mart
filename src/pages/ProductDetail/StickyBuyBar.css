@@ -1,0 +1,176 @@
+.sticky-buy-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 6px 24px -10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+  pointer-events: none;
+  padding: 10px 0;
+}
+
+.sticky-buy-bar.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sticky-buy-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.sticky-buy-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sticky-buy-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sticky-buy-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+.sticky-buy-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: var(--color-text-faint);
+}
+
+.sticky-buy-price-block {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.sticky-buy-price {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-heading);
+}
+
+.sticky-buy-discount-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.sticky-buy-old-price {
+  font-size: 11.5px;
+  color: var(--color-text-faint);
+  text-decoration: line-through;
+}
+
+.sticky-buy-discount-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--color-danger-400);
+}
+
+.sticky-buy-heart {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-strong);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.sticky-buy-heart:hover {
+  border-color: var(--color-danger-400);
+}
+
+.sticky-buy-heart.active {
+  border-color: var(--color-danger-400);
+  background: var(--color-danger-50);
+}
+
+.sticky-buy-cart-btn {
+  background: var(--color-brand-50);
+  color: var(--color-brand-500);
+  border: 1.5px solid var(--color-brand-500);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sticky-buy-cart-btn:hover:not(:disabled) {
+  background: var(--color-brand-500);
+  color: #fff;
+}
+
+.sticky-buy-now-btn {
+  background: var(--color-brand-500);
+  color: #fff;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.sticky-buy-now-btn:hover:not(:disabled) {
+  background: var(--color-brand-600);
+  transform: translateY(-1px);
+}
+
+.sticky-buy-cart-btn:disabled,
+.sticky-buy-now-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 760px) {
+  .sticky-buy-name,
+  .sticky-buy-rating {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .sticky-buy-bar-inner {
+    gap: 8px;
+  }
+
+  .sticky-buy-cart-btn,
+  .sticky-buy-now-btn {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}

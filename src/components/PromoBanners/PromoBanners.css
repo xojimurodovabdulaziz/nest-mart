@@ -1,0 +1,75 @@
+.promo-section {
+  padding: 12px 0 32px;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.promo-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  min-height: 160px;
+  border-radius: 12px;
+  padding: 28px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.promo-banner h3 {
+  font-size: 20px;
+  color: var(--color-heading);
+  max-width: 200px;
+  line-height: 1.3;
+}
+
+.promo-shop-now {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-brand-500);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.promo-banner-cream {
+  background: linear-gradient(135deg, var(--color-warning-50), var(--color-warning-100));
+}
+
+.promo-banner-pink {
+  background: linear-gradient(135deg, var(--color-danger-50), var(--color-danger-100));
+}
+
+.promo-banner-blue {
+  background: linear-gradient(135deg, var(--color-border-strong), var(--color-border-strong));
+}
+
+@media (max-width: 900px) {
+  .promo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .promo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-banner {
+    min-height: 130px;
+    padding: 20px;
+  }
+
+  .promo-banner h3 {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,21 @@
+.vendor-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.vendor-panel-dashboard-link {
+  background: var(--color-heading);
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.vendor-panel-dashboard-link:hover {
+  background: var(--color-brand-500);
+}

@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Backend (nestmart-api-core.lovable.app) ba'zi endpoint'larda CORS
+# sarlavhasini qaytarmaydi. Shu sabab frontend har doim nisbiy
+# "/api/..." yo'lidan foydalanadi (src/api/client.ts'ga qarang), va
+# Netlify shu so'rovlarni backendga server tomonidan yo'naltiradi —
+# bu esa brauzer CORS tekshiruvini butunlay chetlab o'tadi.
+[[redirects]]
+  from = "/api/*"
+  to = "https://nestmart-api-core.lovable.app/api/:splat"
+  status = 200
+  force = true
+
+# React Router client-side routing uchun — to'g'ridan-to'g'ri
+# /product/123 kabi ichki sahifaga kirilganda 404 bo'lmasligi uchun
+# hamma so'rov index.html'ga qaytariladi.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

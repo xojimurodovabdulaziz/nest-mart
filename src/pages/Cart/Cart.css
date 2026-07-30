@@ -1,0 +1,201 @@
+.cart-page {
+  padding: var(--space-10) var(--space-5) var(--space-16);
+}
+
+.cart-page h1 {
+  font-size: var(--text-2xl);
+  color: var(--color-heading);
+  margin-bottom: var(--space-6);
+}
+
+.cart-status {
+  color: var(--color-text-faint);
+}
+
+/* ---------- Empty state ---------- */
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-16) var(--space-4);
+  color: var(--color-text-soft);
+}
+
+.cart-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--color-brand-50);
+  color: var(--color-brand-500);
+  margin-bottom: var(--space-5);
+}
+
+.cart-empty-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: var(--space-1);
+}
+
+.cart-empty-subtitle {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-5);
+}
+
+.cart-empty-link {
+  display: inline-block;
+  background: var(--color-brand-500);
+  color: #fff;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.cart-empty-link:hover {
+  background: var(--color-brand-600);
+  transform: translateY(-1px);
+}
+
+/* ---------- Layout ---------- */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.cart-items-count {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+/* ---------- Order summary ---------- */
+.cart-summary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  position: sticky;
+  top: calc(var(--space-16) + var(--space-4));
+}
+
+.cart-summary h3 {
+  font-size: var(--text-md);
+  color: var(--color-heading);
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: var(--space-4) 0 var(--space-5);
+  font-size: var(--text-base);
+  color: var(--color-text-soft);
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--color-border);
+}
+
+.cart-total {
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-brand-500);
+}
+
+.cart-checkout-btn {
+  width: 100%;
+  background: var(--color-brand-500);
+  color: #fff;
+  border: none;
+  padding: var(--space-4);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.cart-checkout-btn:hover {
+  background: var(--color-brand-600);
+  transform: translateY(-1px);
+}
+
+.cart-checkout-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.cart-secure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .cart-layout {
+    grid-template-columns: 1fr 300px;
+    gap: var(--space-5);
+  }
+}
+
+@media (max-width: 720px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-page {
+    padding: var(--space-6) var(--space-3) var(--space-16);
+  }
+
+  .cart-page h1 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-4);
+  }
+
+  .cart-summary {
+    padding: var(--space-4);
+  }
+
+  .cart-summary-row {
+    font-size: var(--text-sm);
+    margin: var(--space-3) 0 var(--space-4);
+  }
+}
+
+@media (max-width: 340px) {
+  .cart-page {
+    padding: var(--space-5) var(--space-2) var(--space-16);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cart-checkout-btn,
+  .cart-empty-link {
+    transition: none;
+  }
+}

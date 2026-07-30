@@ -1,0 +1,141 @@
+.sidebar-block {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.sidebar-block h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-brand-500);
+  display: inline-block;
+}
+
+.category-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.category-sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--color-text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.category-sidebar li:hover {
+  background-color: var(--color-success-100);
+}
+
+.category-sidebar li.active {
+  background-color: var(--color-brand-500);
+  color: #fff;
+}
+
+.cat-icon {
+  color: var(--color-brand-500);
+  flex-shrink: 0;
+}
+
+.category-sidebar li.active .cat-icon {
+  color: #fff;
+}
+
+.cat-name {
+  flex: 1;
+}
+
+.cat-count {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--color-brand-50);
+  color: var(--color-brand-500);
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 6px;
+}
+
+.category-sidebar li.active .cat-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-block {
+    padding: 12px;
+  }
+
+  .category-sidebar ul {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar-block.category-sidebar {
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .category-sidebar h3 {
+    display: none !important;
+  }
+
+  .category-sidebar ul {
+    flex-wrap: nowrap;
+    gap: 18px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .category-sidebar li {
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding: 0 0 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-soft);
+    white-space: nowrap;
+  }
+
+  .category-sidebar li:hover {
+    background-color: transparent;
+    color: var(--color-brand-500);
+  }
+
+  .category-sidebar li.active {
+    background-color: transparent;
+    border-bottom-color: var(--color-brand-500);
+    color: var(--color-brand-500);
+    font-weight: 700;
+  }
+
+  .cat-icon {
+    display: none;
+  }
+
+  .cat-count {
+    display: none;
+  }
+}

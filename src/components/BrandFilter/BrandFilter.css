@@ -1,0 +1,32 @@
+.brand-filter h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 12px;
+}
+
+.brand-filter ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.brand-filter li {
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.brand-filter li:hover {
+  background: var(--color-success-100);
+}
+
+.brand-filter li.active {
+  background: var(--color-brand-500);
+  color: #fff;
+  font-weight: 600;
+}

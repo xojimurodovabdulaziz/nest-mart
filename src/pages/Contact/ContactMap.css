@@ -1,0 +1,20 @@
+.contact-map {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.contact-map .leaflet-container {
+  width: 100%;
+  height: 320px;
+  background: var(--color-border);
+}
+
+.map-pin-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--color-brand-500);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-brand-500);
+}

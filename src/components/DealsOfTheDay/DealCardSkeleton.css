@@ -1,0 +1,39 @@
+.deal-card-skeleton {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--color-border);
+}
+
+.deal-skeleton-image {
+  width: 100%;
+  height: 150px;
+}
+
+.deal-skeleton-info {
+  padding: 14px;
+}
+
+.deal-skeleton-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.deal-skeleton-price {
+  width: 46px;
+  height: 15px;
+}
+
+.deal-skeleton-btn {
+  width: 56px;
+  height: 24px;
+  border-radius: 999px;
+}
+
+@media (max-width: 480px) {
+  .deal-skeleton-image {
+    height: 105px;
+  }
+}

@@ -1,0 +1,135 @@
+.wishlist-btn {
+  position: absolute;
+  top: 48px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.product-card:hover .wishlist-btn {
+  opacity: 1;
+}
+
+.wishlist-btn:hover {
+  border-color: var(--color-danger-400);
+}
+
+.wishlist-btn.pop {
+  animation: wishlistPop 0.3s ease;
+}
+
+@keyframes wishlistPop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.quick-view-btn {
+  position: absolute;
+  top: 84px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  color: var(--color-text-muted);
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.product-card:hover .quick-view-btn {
+  opacity: 1;
+}
+
+.quick-view-btn:hover {
+  border-color: var(--color-brand-500);
+  color: var(--color-brand-500);
+  transform: scale(1.08);
+}
+
+@media (max-width: 1024px), (hover: none) {
+  .quick-view-btn {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-view-btn {
+    top: 78px;
+    right: 9px;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-view-btn {
+    width: 24px;
+    height: 24px;
+    top: 72px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 1024px), (hover: none) {
+  .wishlist-btn {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .wishlist-btn {
+    top: 42px;
+    right: 9px;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-name {
+    font-size: 13px;
+    min-height: auto;
+  }
+
+  .wishlist-btn {
+    width: 24px;
+    height: 24px;
+    top: 38px;
+    right: 8px;
+  }
+
+}
+
+.product-vendor {
+  font-size: 12px;
+  color: var(--color-text-faint);
+  margin-bottom: 10px;
+}
+
+.product-vendor span {
+  color: var(--color-brand-500);
+  font-weight: 600;
+}
