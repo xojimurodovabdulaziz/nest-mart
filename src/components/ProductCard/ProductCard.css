@@ -195,7 +195,7 @@
     padding: 8px;
     border-radius: 10px;
     width: 100%;
-    max-width: none;
+    max-width: 200px;
     box-sizing: border-box;
   }
 
