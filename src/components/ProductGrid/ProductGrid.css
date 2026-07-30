@@ -1,7 +1,7 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  justify-content: space-between;
 }
 
 @media (min-width: 1600px) {
@@ -39,12 +39,13 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
   .product-grid {
-    gap: 8px;
-  }
+    justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);  
+  
 }
-
+}
 .grid-toolbar {
   display: flex;
   justify-content: flex-end;
