@@ -1,7 +1,6 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
 }
 
 @media (min-width: 1600px) {
@@ -34,16 +33,19 @@
 
 @media (max-width: 768px) {
   .product-grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    max-width: 768px;
   }
 }
 
 @media (max-width: 550px) {
   .product-grid {
-    gap: 5px;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 370px;
+    gap: 5px;
   }
+
 }
 
 .grid-toolbar {
