@@ -21,8 +21,9 @@
 }
 
 .product-image {
-  width: 100%;
-  height: 140px;
+  width: 164px;
+  height: 164px;
+  max-width: 100%;
   object-fit: cover;
   border-radius: var(--radius-md);
   margin-bottom: var(--space-3);
@@ -43,12 +44,16 @@
 }
 
 .product-name {
-  font-size: var(--text-base);
-  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 0%;
+  vertical-align: middle;
   color: var(--color-text);
   margin-bottom: var(--space-2);
   min-height: 36px;
-  line-height: 1.3;
   /* Clamp to 2 lines so uneven product names don't break card rhythm. */
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -145,6 +150,7 @@
   }
 
   .product-image {
+    width: 100%;
     height: 130px;
     margin-bottom: 10px;
   }
@@ -161,13 +167,15 @@
   }
 
   .product-image {
+    width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: var(--radius-md);
   }
 
   .product-name {
-    font-size: var(--text-sm);
+    font-size: 14px;
+    line-height: 17px;
     min-height: 34px;
   }
 
@@ -193,10 +201,12 @@
 
   .product-image {
     width: 100%;
-    height: 100px;
+    max-width: 164px;
+    height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    margin-bottom: 6px;
+    margin: 0 auto 6px;
+    display: block;
   }
 
   .product-eyebrow {
@@ -205,9 +215,11 @@
   }
 
   .product-name {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
     font-size: 12px;
+    line-height: 14.4px;
     min-height: 30px;
-    line-height: 1.2;
     margin-bottom: 4px;
   }
 
