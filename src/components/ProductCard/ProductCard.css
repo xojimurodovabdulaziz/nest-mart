@@ -159,6 +159,7 @@
 
 @media (max-width: 768px) {
   .product-card {
+    max-width: 210px;
     padding: 11px;
     border-radius: var(--radius-md);
   }
@@ -168,7 +169,7 @@
   }
 
   .product-image {
-    width: 100%;
+max-width: 164px;
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: var(--radius-md);
