@@ -8,7 +8,7 @@ import axios from "axios";
 // server-serverga ishlagani uchun CORS tekshiruvi umuman ishga
 // tushmaydi.
 export const api = axios.create({
-  baseURL: "",
+  baseURL: "https://nestmart-api-core.lovable.app",
   headers: { "Content-Type": "application/json" },
 });
 
