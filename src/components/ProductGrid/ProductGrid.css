@@ -41,9 +41,8 @@
 
 @media (max-width: 550px) {
   .product-grid {
-    justify-content: space-between;
-        grid-template-columns: repeat(2, 1fr);  
-  
+    grid-template-columns: repeat(2, 1fr);  
+  gap: 5px;
 }
 }
 .grid-toolbar {

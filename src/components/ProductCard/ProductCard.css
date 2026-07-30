@@ -193,6 +193,7 @@
 
 @media (max-width: 550px) {
   .product-card {
+    max-width: 210px;
     padding: 8px;
     border-radius: 10px;
     max-width: 190px;
