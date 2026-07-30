@@ -52,6 +52,7 @@
   /* Clamp to 2 lines so uneven product names don't break card rhythm. */
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -184,7 +185,18 @@
 @media (max-width: 480px) {
   .product-card {
     padding: 8px;
-    border-radius: var(--radius-md);
+    border-radius: 10px;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 100px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 6px;
   }
 
   .product-eyebrow {
@@ -193,8 +205,9 @@
   }
 
   .product-name {
-    font-size: var(--text-xs);
-    min-height: 28px;
+    font-size: 12px;
+    min-height: 30px;
+    line-height: 1.2;
     margin-bottom: 4px;
   }
 
@@ -213,7 +226,7 @@
   }
 
   .product-price {
-    font-size: var(--text-sm);
+    font-size: 13px;
     margin-right: 0;
   }
 
@@ -222,18 +235,20 @@
   }
 
   .add-to-cart-btn {
-    padding: 6px 8px;
+    padding: 5px 8px;
     font-size: 10px;
-    margin-top: 6px;
+    margin-top: 5px;
+    width: 100%;
+    justify-content: center;
   }
 
   .qty-stepper button {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   .qty-stepper span {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 

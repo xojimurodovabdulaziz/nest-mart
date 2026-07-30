@@ -64,12 +64,16 @@ const ProductCard = ({ product, categoryName, vendorName }: Props) => {
     addToCart(product.id).catch(handleActionError);
   };
 
+  // NOTE: backend /api/public/cart POST endpoint quantity'ni "yakuniy son"
+  // emas, "necha dona qo'shish/ayirish" (delta) sifatida talqin qiladi.
+  // Shu sababli bu yerda har doim faqat 1 (yoki -1) yuboriladi, quantity + 1
+  // emas.
   const handleIncrement = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     if (isUpdating) return;
     setIsUpdating(true);
-    addToCart(product.id, quantity + 1)
+    addToCart(product.id, 1)
       .catch(handleActionError)
       .finally(() => setIsUpdating(false));
   };
@@ -80,7 +84,7 @@ const ProductCard = ({ product, categoryName, vendorName }: Props) => {
     if (isUpdating) return;
     setIsUpdating(true);
     const action =
-      quantity <= 1 ? removeFromCart(product.id) : addToCart(product.id, quantity - 1);
+      quantity <= 1 ? removeFromCart(product.id) : addToCart(product.id, -1);
     action.catch(handleActionError).finally(() => setIsUpdating(false));
   };
 
@@ -175,7 +179,7 @@ const ProductCard = ({ product, categoryName, vendorName }: Props) => {
           onIncrement={() => {
             if (isUpdating) return;
             setIsUpdating(true);
-            addToCart(product.id, quantity + 1)
+            addToCart(product.id, 1)
               .catch(handleActionError)
               .finally(() => setIsUpdating(false));
           }}
@@ -183,7 +187,7 @@ const ProductCard = ({ product, categoryName, vendorName }: Props) => {
             if (isUpdating) return;
             setIsUpdating(true);
             const action =
-              quantity <= 1 ? removeFromCart(product.id) : addToCart(product.id, quantity - 1);
+              quantity <= 1 ? removeFromCart(product.id) : addToCart(product.id, -1);
             action.catch(handleActionError).finally(() => setIsUpdating(false));
           }}
           onClose={() => setIsQuickViewOpen(false)}
