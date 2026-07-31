@@ -1,0 +1,1 @@
+import{S as e,b as t,f as n}from"./index-D5IKfK3y.js";var r=n(),i=e(t(),1),a=e=>{let t=(0,r.c)(3),n,a;t[0]===e?(n=t[1],a=t[2]):(n=()=>{let t=document.title;return document.title=e?`${e} — Nest`:`Nest — Onlayn oziq-ovqat do'koni`,()=>{document.title=t}},a=[e],t[0]=e,t[1]=n,t[2]=a),(0,i.useEffect)(n,a)};export{a as t};
